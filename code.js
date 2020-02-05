@@ -1,6 +1,6 @@
 async function getWeather() {
     var city = document.getElementById("city").value;
-    var url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5e0f04e1325355177bc7ff1c5c8f64f3`;
+    var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5e0f04e1325355177bc7ff1c5c8f64f3`;
     var data = await fetch(url);
     var result = await data.json();
     console.log(result);
@@ -9,7 +9,7 @@ async function getWeather() {
 }
 async function getForecast() {
     var city = document.getElementById("city").value;
-    var url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=5e0f04e1325355177bc7ff1c5c8f64f3`;
+    var url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=5e0f04e1325355177bc7ff1c5c8f64f3`;
     var data = await fetch(url);
     var result = await data.json();
     var xaxis = [];
